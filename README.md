@@ -21,12 +21,12 @@ All PRNGs are tested by [Dieharder tests](https://webhome.phy.duke.edu/~rgb/Gene
 ## How did I test?
 
 ```
-$ ./go_mathrand.out 12345 | pv | dieharder -a -g 200 >> ./test_results.txt
+$ go run . 12345 | pv | dieharder -a -g 200 >> ./test_results.txt
 ```
 
 [pv](http://manpages.ubuntu.com/manpages/focal/man1/pv.1.html) shows  the  progress  of  data  through  a pipeline by giving information such as time elapsed, percentage completed (with progress bar), current throughput rate, total data transferred, and ETA.
 
-So, using pipeline, generate all pseudo-random bytes from code, send to pv, and finally send to dieharder for test.
+So, using pipeline, generate all pseudo-random bytes from code, send to pv, and finally send to dieharder for test. Of course, you can just execute (executable compiled) binary file instead of ```go run . 12345```. It's just example.
 
 ```-a``` means "All tests". Below is list of tests which are in dieharder tests.
 
