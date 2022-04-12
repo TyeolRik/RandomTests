@@ -15,7 +15,7 @@ func main() {
 	for i := range seeds {
 		seeds[i] = uint32(i)
 	}
-	r := rngset.NewWELL19937c(seeds)
+	r := rngset.NewWELL19937a(seeds)
 	for {
 		for i := 0; i < 320000; i = i + 4 {
 			binary.LittleEndian.PutUint32(temp[i:i+4], r.NewUint32())
