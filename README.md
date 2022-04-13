@@ -19,6 +19,7 @@
 |     WELL1024a   |      12345 |        111 |          3 |          0 |
 |    WELL19937a   |      12345 |        108 |          6 |          0 |
 |    WELL19937c   |      12345 |        114 |          0 |          0 |
+|    Keccak256    |      12345 |        111 |          3 |          0 |
 
 All PRNGs are tested by [Dieharder tests](https://webhome.phy.duke.edu/~rgb/General/dieharder.php) (Actually there is ubuntu package in [here](https://linux.die.net/man/1/dieharder))
 
