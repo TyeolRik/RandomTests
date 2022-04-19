@@ -2,7 +2,7 @@
 # For Dieharder test
 
 declare -a testList
-testList=( "well512a" "well1024a" "well19937a" "well19937c" )
+testList=( "crypto_keccak256" "crypto_keccak256_keccak256" )
 
 for eachTest in ${testList[@]}; do
     echo "*********************"

@@ -37,6 +37,11 @@ func main() {
 		}
 
 		// Need Keccak?
+		for i := 0; i < 6000; i++ {
+			keccak256 = sha3.NewLegacyKeccak256()
+			keccak256.Write(afterCollectBlock[i*32 : i*32+32])
+			copy(afterCollectBlock[i*32:i*32+32], keccak256.Sum(nil))
+		}
 
 		merge6Blocks := make([]byte, 0, 32*1000)
 		for i := 0; i < 1000; i++ {
@@ -49,5 +54,4 @@ func main() {
 		}
 		binary.Write(os.Stdout, binary.LittleEndian, merge6Blocks)
 	}
-
 }
